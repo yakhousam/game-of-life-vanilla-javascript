@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+  background: #111;
+}
+.grid-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 120px 1fr;
+}
+section.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(black, dimgray, black); */
+}
+#grid{
+    grid-row: 2;
+    grid-column: 2 ;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 1em 4em rgba(0, 0, 0, 0.5);
+    
+}
+.box{
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid gray;
+    background-color: white;
+
+    /* border-radius: 50%; */
+}
+
+.life{
+    background-color: lightgreen;
+}
+.header{
+    grid-row: 1;
+    grid-column: 1 / span 3 ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* background:  #181818; */
+}
+.left-sidebare{
+    grid-row: 2;
+    grid-column: 1 ;
+}
+.model-container{
+    width: 90%;
+    height: 95%;
+    padding-top: 10px;
+    margin: auto;
+    background:  #181818;
+    display: flex;
+    flex-direction: column;
+}
+.right-sidebare{
+    grid-row: 2;
+    grid-column: 3 ;
+    /* background: lightgrey; */
+}
+#game-model{
+    height: 90%;
+    width: 90%;
+    padding-top: 10px;
+    margin: auto;
+    background:  #181818;
+    overflow: auto
+}
+:checked + label{
+    color: deepskyblue;
+}
+[name = model]{
+    visibility: hidden;
+}
+.left-sidebare label:hover{
+    cursor: pointer;
+    color: skyblue;
+}
+button {
+    width: 150px;
+    height: 50px;
+    
+    border: none;
+    border-radius: 5px;
+    /* margin:5px auto; */
+    background: linear-gradient(gray, black, gray);
+    color: white;
+    font-size: 20px;
+}
+button:hover{
+    cursor: pointer;
+    background: linear-gradient(black, gray, black);
+}
+button:enabled{
+    color: lightskyblue;
+}
